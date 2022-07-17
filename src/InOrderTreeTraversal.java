@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+// tree node contains the value and right and left nodes information
 public class InOrderTreeTraversal {
     class TreeNode{
         int val;
@@ -11,7 +12,7 @@ public class InOrderTreeTraversal {
             this.right = right;
         }
     }
-
+        // recursively calling left and right wrt traversal
     static void rec(TreeNode root, ArrayList<Integer> list){
         if(root == null) return;
 
@@ -19,7 +20,7 @@ public class InOrderTreeTraversal {
         list.add(root.val);
         rec(root.right, list);
     }
-
+        // calling the rec method for the confirmation
     public static ArrayList<Integer> inOrderTraversal(TreeNode root){
         ArrayList<Integer> list = new ArrayList<> ();
 
