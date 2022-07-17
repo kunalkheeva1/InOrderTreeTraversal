@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class InOrderTreeTraversal {
     class TreeNode{
         int val;
@@ -10,6 +12,14 @@ public class InOrderTreeTraversal {
         }
     }
 
+    static void rec(TreeNode root, ArrayList<Integer> list){
+        if(root == null) return;
+
+        rec(root.left, list);
+        list.add(root.val);
+        rec(root.right, list);
+
+    }
 
 
 
