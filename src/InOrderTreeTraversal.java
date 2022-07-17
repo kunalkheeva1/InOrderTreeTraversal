@@ -18,7 +18,13 @@ public class InOrderTreeTraversal {
         rec(root.left, list);
         list.add(root.val);
         rec(root.right, list);
+    }
 
+    public static ArrayList<Integer> inOrderTraversal(TreeNode root){
+        ArrayList<Integer> list = new ArrayList<> ();
+
+        rec(root, list);
+        return list;
     }
 
 
